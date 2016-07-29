@@ -2,3 +2,9 @@
 
 This is my personal starter kit for developing Android apps
 using React Native on Redux
+
+# TODO
+- [ ] Implement basic UI elements
+- [ ] Integrate routes
+- [ ] Integrate remote API calls using Axios
+- [ ] Add splash screen
