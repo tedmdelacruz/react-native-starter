@@ -3,10 +3,11 @@ import { DrawerLayoutAndroid, View, Text } from 'react-native'
 
 import TopBar from './TopBar'
 import Drawer from './Drawer'
-import { components, font } from '../styles'
+import { block, components, font } from '../styles'
 
 export class App extends Component {
     render() {
+
         return (
             <DrawerLayoutAndroid
                 style={ components.container }
@@ -16,8 +17,10 @@ export class App extends Component {
 
                 <TopBar />
 
-                <View style={ components.content }>
-                    <Text style={ font.default }>Hello World!</Text>
+                <View style={{ ...components.content, ...block, }}>
+                    <Text style={ font.default }>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum rerum iure, totam. Soluta sequi molestias vero dignissimos eligendi, aliquam, ducimus omnis, laborum quidem perspiciatis incidunt enim ad, vitae praesentium doloribus.
+                    </Text>
                 </View>
 
             </DrawerLayoutAndroid>

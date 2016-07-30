@@ -8,14 +8,21 @@ const CALIFORNIA = '#F89406'
 const WHITE = '#FFF'
 const BLUE_WHITE = '#E4F1FE'
 const DARK_GREY = '#444'
+const GREY = '#888'
 
-const PRIMARY_COLOR = CARIBBEAN_GREEN
-const SECONDARY_COLOR = TURQUOISE
+const PRIMARY = CARIBBEAN_GREEN
+const PRIMARY_ALT = TURQUOISE
+const SECONDARY = WHITE
+const SECONDARY_ALT = BLUE_WHITE
+const ACCENT = CALIFORNIA
 
-const BG_COLOR = PRIMARY_COLOR 
-const FG_COLOR = WHITE
-const ACCENT_COLOR = CALIFORNIA
-export const colors = { BG_COLOR, FG_COLOR, ACCENT_COLOR }
+export const color = {
+    PRIMARY,
+    PRIMARY_ALT,
+    SECONDARY,
+    SECONDARY_ALT,
+    ACCENT,
+}
 
 // Font Styles
 const BASE_FONT_SIZE = 18
@@ -34,12 +41,13 @@ export const components = {
     toolbar: {
         flex: 1,
         minHeight: BASE_UNIT * 1.25,
-        backgroundColor: BG_COLOR,
+        backgroundColor: PRIMARY,
+    },
+    drawer: {
     },
     content: {
         flex: 8,
-        backgroundColor: FG_COLOR,
-        padding: BASE_UNIT / 3,
+        backgroundColor: SECONDARY,
     },
 }
 

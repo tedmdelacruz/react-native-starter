@@ -1,30 +1,20 @@
 import React, { Component } from 'react'
 import { ScrollView, View, Text } from 'react-native'
-import { block, components, font, colors } from '../styles'
+import { block, components, font, color } from '../styles'
+import DrawerItem from './DrawerItem'
 
-
-class DrawerItem extends Component {
-    render() {
-        return (
-            <View style={{ ...block }}>
-                { this.props.children }
-            </View>
-        )
-    }
-}
 
 export default class Drawer extends Component {
     render() {
         return (
-            <View>
-                <ScrollView>
-                    <DrawerItem>
-                        <Text style={{ ...font.default, fontWeight: 'bold' }}>
-                            This is the Drawer
-                        </Text>
-                    </DrawerItem>
-                </ScrollView>
-            </View>
+            <ScrollView style={ components.drawer }>
+                <DrawerItem>
+                    <Text style={{ ...font.default, flex: 2 }}>
+                        Settings
+                    </Text>
+                    <View style={{ ...block, backgroundColor: color.PRIMARY }}/>
+                </DrawerItem>
+            </ScrollView>
         )
     }
 }
