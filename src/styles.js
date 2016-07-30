@@ -21,6 +21,11 @@ export const colors = { BG_COLOR, FG_COLOR, ACCENT_COLOR }
 const BASE_FONT_SIZE = 18
 const DEFAULT_TEXT_COLOR = DARK_GREY
 
+// Component Styles
+export const block = {
+    padding: BASE_UNIT / 3
+}
+
 export const components = {
     container: {
         flex: 1,
@@ -43,9 +48,5 @@ export const font = {
     default: {
         fontSize: BASE_FONT_SIZE,
         color: DEFAULT_TEXT_COLOR,
-    },
-    white: {
-        fontSize: BASE_FONT_SIZE,
-        color: WHITE,
-    },
+    }
 }

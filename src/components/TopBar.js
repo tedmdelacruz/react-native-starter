@@ -16,7 +16,9 @@ export default class TopBar extends Component {
                 style={ components.toolbar }   
                 title={ settings.APP_NAME }
                 titleColor={ colors.FG_COLOR }>
+
                 <Text style={ toolbarFont }>{ settings.APP_DESC }</Text>
+                
             </ToolbarAndroid>
         )
     }
