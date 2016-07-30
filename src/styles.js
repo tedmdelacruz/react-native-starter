@@ -49,6 +49,12 @@ export const components = {
         flex: 8,
         backgroundColor: SECONDARY,
     },
+    bottomNav: {
+        flex: 2,
+        flexDirection: 'row',
+        minHeight: BASE_UNIT * 1.5,
+        backgroundColor: PRIMARY,
+    }
 }
 
 export const font = {

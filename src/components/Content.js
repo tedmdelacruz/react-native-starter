@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
-import { block } from '../styles'
+import { block, components } from '../styles'
 
-
-export default class DrawerItem extends Component {
+export default class Content extends Component {
     render() {
         return (
-            <View style={{ ...block, flex: 1, flexDirection: 'row' }}>
+            <View style={{ ...components.content, ...block, }}>
                 { this.props.children }
             </View>
         )

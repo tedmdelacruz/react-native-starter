@@ -3,6 +3,7 @@ import { ToolbarAndroid, View, Text } from 'react-native'
 import { config } from '../config'
 import { color, components, font } from '../styles'
 
+
 export default class TopBar extends Component {
     render() {
         const toolbarFont = {
