@@ -38,9 +38,14 @@ export const components = {
     },
 }
 
-export const text = {
+export const font = {
+    BASE_FONT_SIZE,
     default: {
         fontSize: BASE_FONT_SIZE,
         color: DEFAULT_TEXT_COLOR,
+    },
+    white: {
+        fontSize: BASE_FONT_SIZE,
+        color: WHITE,
     },
 }

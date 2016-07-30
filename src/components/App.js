@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 
 import TopBar from './TopBar'
-import { components, text } from '../styles'
+import { components, font } from '../styles'
 
 export class App extends Component {
     render() {
@@ -10,7 +10,7 @@ export class App extends Component {
             <View style={ components.container }>
                 <TopBar />
                 <View style={ components.content }>
-                    <Text style={ text.default }>Hello World!</Text>
+                    <Text style={ font.default }>Hello World!</Text>
                 </View>
             </View>
         )
