@@ -38,9 +38,17 @@ export const components = {
         flex: 1,
         flexDirection: 'column',
     },
-    toolbar: {
+    toolbarContainer: {
         flex: 1,
-        minHeight: BASE_UNIT * 1.25,
+        flexDirection: 'row',
+        backgroundColor: PRIMARY,
+    },
+    toolbarDrawerIcon: {
+        ...block,
+        flex: 1,
+    },
+    toolbar: {
+        flex: 8,
         backgroundColor: PRIMARY,
     },
     drawer: {
@@ -54,6 +62,11 @@ export const components = {
         flexDirection: 'row',
         minHeight: BASE_UNIT * 1.5,
         backgroundColor: PRIMARY,
+    },
+    bottomNavItem: {
+        ...block,
+        flex: 1,
+        backgroundColor: PRIMARY_ALT,
     }
 }
 

@@ -1,28 +1,30 @@
 import React, { Component } from 'react'
-import { ToolbarAndroid, View, Text } from 'react-native'
+import { ToolbarAndroid, TouchableHighlight, View, Text } from 'react-native'
+import { Button } from './common'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import { config } from '../config'
 import { color, components, font } from '../styles'
 
 
 export default class TopBar extends Component {
+    openDrawer() {
+    }
+
     render() {
-        const toolbarFont = {
-            fontSize: font.BASE_FONT_SIZE * 0.85,
-            textAlignVertical: 'bottom',
-            color: color.SECONDARY
-        }
+        return (
+            <View style={ components.toolbarContainer }>
+                <Button style={ components.toolbarDrawerIcon }
+                    onPress={ this.openDrawer.bind(this) }>
+                    
+                    <Icon name="menu" size={ 30 } color={ color.SECONDARY }
+                        style={{ textAlign: 'center' }}/>
+                </Button>
 
-        return(
-            <ToolbarAndroid
-                style={ components.toolbar }   
-                title={ config.APP_NAME }
-                titleColor={ color.SECONDARY }>
-
-                <Text style={ toolbarFont }>{ config.APP_DESC }</Text>
-                <Icon name="menu" size={ 30 } color={ color.SECONDARY } />
-                
-            </ToolbarAndroid>
+                <ToolbarAndroid
+                    style={ components.toolbar }   
+                    title={ config.APP_NAME }
+                    titleColor={ color.SECONDARY } />
+            </View>
         )
     }
 }

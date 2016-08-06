@@ -25,14 +25,8 @@ export class App extends Component {
                     </Text>
                 </Content>
 
-                <BottomNav>
-                    <View style={{ ...block, flex: 1, backgroundColor: 'red'}}>
-                    </View>
-                    <View style={{ ...block, flex: 1, backgroundColor: 'yellow'}}>
-                    </View>
-                    <View style={{ ...block, flex: 1, backgroundColor: 'blue'}}>
-                    </View>
-                </BottomNav>
+                <BottomNav/>
+                
             </DrawerLayoutAndroid>
         )
     }
