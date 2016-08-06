@@ -7,7 +7,6 @@ import Drawer from './Drawer'
 import Content from './Content'
 import BottomNav from './BottomNav'
 
-
 export class App extends Component {
     render() {
         return (
@@ -26,7 +25,7 @@ export class App extends Component {
                 </Content>
 
                 <BottomNav/>
-                
+
             </DrawerLayoutAndroid>
         )
     }

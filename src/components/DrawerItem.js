@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
-import { block } from '../styles'
-
+import { View, Text } from 'react-native'
+import { components, font } from '../styles'
 
 export default class DrawerItem extends Component {
     render() {
         return (
-            <View style={{ ...block, flex: 1, flexDirection: 'row' }}>
-                { this.props.children }
+            <View style={ components.drawerItem }>
+                <Text style={ font.default }>
+                    { this.props.children }
+                </Text>
+                { this.props.icon }
             </View>
         )
     }

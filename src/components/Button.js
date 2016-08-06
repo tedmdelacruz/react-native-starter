@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { TouchableHighlight } from 'react-native'
 
-
 export default class Button extends Component {
     handlePress() {
         this.props.onPress()

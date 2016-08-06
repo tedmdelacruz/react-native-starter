@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { ToolbarAndroid, TouchableHighlight, View, Text } from 'react-native'
-import { Button } from './common'
 import Icon from 'react-native-vector-icons/MaterialIcons'
+
+import Button from './Button'
 import { config } from '../config'
 import { color, components, font } from '../styles'
-
 
 export default class TopBar extends Component {
     openDrawer() {

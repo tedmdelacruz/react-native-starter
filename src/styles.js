@@ -29,7 +29,7 @@ const BASE_FONT_SIZE = 18
 const DEFAULT_TEXT_COLOR = DARK_GREY
 
 // Component Styles
-export const block = {
+const block = {
     padding: BASE_UNIT / 3
 }
 
@@ -52,8 +52,14 @@ export const components = {
         backgroundColor: PRIMARY,
     },
     drawer: {
+        flexDirection: 'column'
+    },
+    drawerItem: {
+        ...block,
+        flex: 1,
     },
     content: {
+        ...block,
         flex: 8,
         backgroundColor: SECONDARY,
     },
@@ -66,6 +72,8 @@ export const components = {
     bottomNavItem: {
         ...block,
         flex: 1,
+        borderRightWidth: 1,
+        borderColor: PRIMARY,
         backgroundColor: PRIMARY_ALT,
     }
 }
