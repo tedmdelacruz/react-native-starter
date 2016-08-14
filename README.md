@@ -3,11 +3,13 @@
 This is my personal starter kit for developing Android apps
 using React Native on Redux
 
+# Current
+Looking into https://github.com/aksonov/react-native-router-flux/blob/master/docs/DETAILED_EXAMPLE.md
+
 # TODO
-- [x] Integrate React Native Material Kit
 - [x] Integrate React Native Vector Icon pack
-- [ ] Re-Implement basic UI elements on Material Kit
-- [ ] Integrate basic static images
 - [ ] Integrate routes
+- [ ] Look into using `StyleSheet.create` instead of plain JS objects for styling
+- [ ] Integrate basic static images
 - [ ] Integrate remote API calls using Axios
 - [ ] Add splash screen
