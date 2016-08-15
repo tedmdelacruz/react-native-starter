@@ -1,5 +1,7 @@
+import { StyleSheet } from 'react-native'
+
 // Measurements
-export const BASE_UNIT = 50
+const BASE_UNIT = 50
 
 // Colors
 const CARIBBEAN_GREEN = '#03C9A9'
@@ -31,9 +33,9 @@ const DEFAULT_TEXT_COLOR = DARK_GREY
 // Component Styles
 const block = {
     padding: BASE_UNIT / 3
-}
+} 
 
-export const components = {
+export const components = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
@@ -76,12 +78,12 @@ export const components = {
         borderColor: PRIMARY,
         backgroundColor: PRIMARY_ALT,
     }
-}
+})
 
-export const font = {
+export const font = StyleSheet.create({
     BASE_FONT_SIZE,
     default: {
         fontSize: BASE_FONT_SIZE,
         color: DEFAULT_TEXT_COLOR,
     }
-}
+})

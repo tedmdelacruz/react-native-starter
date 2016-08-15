@@ -1,23 +1,17 @@
 import React, { Component } from 'react'
-import { AppRegistry } from 'react-native'
-import thunkMiddleware from 'redux-thunk'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
+import { AppRegistry, View, Text } from 'react-native'
+import { Scene, Router } from 'react-native-router-flux'
 
-import { reducer } from './src/reducer'
-import { AppContainer } from './src/containers'
-
-const store = createStore(
-    reducer,
-    applyMiddleware(thunkMiddleware)
-)
+import Home from './src/pages/Home'
 
 export class App extends Component {
     render() {
         return (
-            <Provider store={ store }>
-                <AppContainer />
-            </Provider>
+            <Router>
+                <Scene key="root">
+                    <Scene key="index" component={Home} initial={true} hideNavBar={true}/>
+                </Scene>
+            </Router>
         )
     }
 }
