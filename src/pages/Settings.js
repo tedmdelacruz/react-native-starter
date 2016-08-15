@@ -7,7 +7,7 @@ import Drawer from '../components/Drawer'
 import Content from '../components/Content'
 import BottomNav from '../components/BottomNav'
 
-export default class Home extends Component {
+export default class Settings extends Component {
     render() {
         return (
             <DrawerLayoutAndroid
@@ -19,7 +19,7 @@ export default class Home extends Component {
                 <TopBar />
 
                 <Content>
-                    <Text style={ font.default }>Home</Text>
+                    <Text style={ font.default }>Settings</Text>
                 </Content>
 
                 <BottomNav/>

@@ -29,6 +29,7 @@ export const color = {
 // Font Styles
 const BASE_FONT_SIZE = 18
 const DEFAULT_TEXT_COLOR = DARK_GREY
+const INVERSE_TEXT_COLOR = WHITE
 
 // Component Styles
 const block = {
@@ -77,7 +78,12 @@ export const components = StyleSheet.create({
         borderRightWidth: 1,
         borderColor: PRIMARY,
         backgroundColor: PRIMARY_ALT,
-    }
+    },
+    bottomNavItemText: {
+        fontSize: BASE_FONT_SIZE,
+        color: INVERSE_TEXT_COLOR,
+        textAlign: 'center',
+    },
 })
 
 export const font = StyleSheet.create({
@@ -85,5 +91,9 @@ export const font = StyleSheet.create({
     default: {
         fontSize: BASE_FONT_SIZE,
         color: DEFAULT_TEXT_COLOR,
-    }
+    },
+    inverse: {
+        color: INVERSE_TEXT_COLOR,
+    },
 })
+    
