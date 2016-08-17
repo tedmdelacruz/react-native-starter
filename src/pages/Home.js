@@ -1,30 +1,28 @@
 import React, { Component } from 'react'
-import { DrawerLayoutAndroid, View, Text } from 'react-native'
+import { Text } from 'react-native'
 
-import { block, components, font } from '../styles'
-import TopBar from '../components/TopBar'
-import Drawer from '../components/Drawer'
-import Content from '../components/Content'
-import BottomNav from '../components/BottomNav'
+import { font, util } from '../styles'
+import Base from './Base'
+import Button from '../components/Button'
 
 export default class Home extends Component {
+    fetchData() {
+        console.log('Fetching data from an external API...')
+    }
+
     render() {
         return (
-            <DrawerLayoutAndroid
-                style={ components.container }
-                drawerWidth={ 300 }
-                drawerPosition={ DrawerLayoutAndroid.positions.Left }
-                renderNavigationView={ () => <Drawer/> }>
+            <Base>
+                <Text style={[ font.DEFAULT, util.PUSH_BOTTOM ]}>
+                    This is the Home page
+                </Text>
 
-                <TopBar />
-
-                <Content>
-                    <Text style={ font.default }>Home</Text>
-                </Content>
-
-                <BottomNav/>
-
-            </DrawerLayoutAndroid>
+                <Button style={ util.BG_PRIMARY } onPress={this.fetchData.bind(this)}>
+                    <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
+                        Fetch data from an external API
+                    </Text>
+                </Button>
+            </Base>
         )
     }
 }
