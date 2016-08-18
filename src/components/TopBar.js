@@ -8,6 +8,7 @@ import { color, components, font } from '../styles'
 
 export default class TopBar extends Component {
     openDrawer() {
+        this.props.openDrawer()
     }
 
     render() {

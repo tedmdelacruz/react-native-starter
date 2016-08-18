@@ -11,12 +11,13 @@ export default class Base extends Component {
     render() {
         return (
             <DrawerLayoutAndroid
+                ref={ (_drawer) => this.drawer = _drawer }
                 style={ components.container }
                 drawerWidth={ 300 }
                 drawerPosition={ DrawerLayoutAndroid.positions.Left }
                 renderNavigationView={ () => <Drawer/> }>
 
-                <TopBar />
+                <TopBar openDrawer={ this.drawer.openDrawer } />
 
                 <Content>
                     { this.props.children }
