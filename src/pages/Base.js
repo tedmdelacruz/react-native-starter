@@ -8,6 +8,15 @@ import Content from '../components/Content'
 import BottomNav from '../components/BottomNav'
 
 export default class Base extends Component {
+    constructor() {
+        super()
+        this.openDrawer = this.openDrawer.bind(this)
+    }
+
+    openDrawer() {
+        this.drawer.openDrawer()
+    }
+
     render() {
         return (
             <DrawerLayoutAndroid
@@ -17,7 +26,7 @@ export default class Base extends Component {
                 drawerPosition={ DrawerLayoutAndroid.positions.Left }
                 renderNavigationView={ () => <Drawer/> }>
 
-                <TopBar openDrawer={ this.drawer.openDrawer } />
+                <TopBar openDrawer={ this.openDrawer } />
 
                 <Content>
                     { this.props.children }
