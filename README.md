@@ -11,4 +11,6 @@ using React Native on Redux
 - [ ] Integrate basic static images
 - [ ] Integrate remote API calls using Axios
 - [ ] Add splash screen
-- [ ] Generate a signed APK
+- [x] Generate a signed APK
+- [x] Add application icon
+
