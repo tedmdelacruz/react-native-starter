@@ -41,6 +41,7 @@ export const util = StyleSheet.create({
     PUSH_BOTTOM: { marginBottom: BASE_UNIT / 3 },
     BG_DEFAULT: { backgroundColor: PRIMARY },
     BG_INVERSE: { backgroundColor: SECONDARY },
+    BG_ACCENT: { backgroundColor: ACCENT },
     TEXT_DEFAULT: { color: DEFAULT_TEXT_COLOR },
     TEXT_INVERSE: { color: INVERSE_TEXT_COLOR },
     TEXT_CENTER: { textAlign: 'center' },
@@ -101,7 +102,6 @@ export const components = StyleSheet.create({
 })
 
 export const font = StyleSheet.create({
-    BASE_FONT_SIZE,
     DEFAULT: {
         fontSize: BASE_FONT_SIZE,
         color: DEFAULT_TEXT_COLOR,
