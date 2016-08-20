@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text } from 'react-native'
+import { ScrollView, RefreshControl, Text } from 'react-native'
 
 import { font, util } from '../styles'
 import Base from './Base'
@@ -21,25 +21,33 @@ export default class Home extends Component {
     render() {
         return (
             <Base>
-                <Text style={[ font.DEFAULT, util.PUSH_BOTTOM ]}>
-                    This is the Home page
-                </Text>
+                <ScrollView
+                    refreshControl={
+                        <RefreshControl
+                            refreshing={this.store.isLoading}
+                            onRefresh={this.fetchData.bind(this)} />
+                        }>
 
-                <Button style={[ util.BG_PRIMARY, util.PUSH_BOTTOM ]} onPress={this.fetchData.bind(this)}>
-                    <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
-                        { this.store.isLoading 
-                            ? 'Fetching data...'
-                            : 'Fetch data from an external API' }
-                        { this.store.message ? "\n" + this.store.message : null }
+                    <Text style={[ font.DEFAULT, util.PUSH_BOTTOM ]}>
+                        This is the Home page
                     </Text>
-                </Button>
-
-
-                <Button style={ util.BG_ACCENT } onPress={this.store.increase}>
-                    <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
-                        Counter: { this.store.counter }
-                    </Text>
-                </Button>
+                    
+                    <Button style={[ util.BG_PRIMARY, util.PUSH_BOTTOM ]} onPress={this.fetchData.bind(this)}>
+                        <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
+                            { this.store.isLoading 
+                                ? 'Fetching data...'
+                                : 'Fetch data from an external API' }
+                            { this.store.message ? "\n" + this.store.message : null }
+                        </Text>
+                    </Button>
+                    
+                    
+                    <Button style={ util.BG_ACCENT } onPress={this.store.increase}>
+                        <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
+                            Counter: { this.store.counter }
+                        </Text>
+                    </Button>
+                </ScrollView>
             </Base>
         )
     }
