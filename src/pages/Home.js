@@ -15,6 +15,7 @@ export default class Home extends Component {
 
     fetchData() {
         console.log('Fetching data from an external API...')
+        this.store.fetchData()
     }
 
     render() {
@@ -26,13 +27,17 @@ export default class Home extends Component {
 
                 <Button style={[ util.BG_PRIMARY, util.PUSH_BOTTOM ]} onPress={this.fetchData.bind(this)}>
                     <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
-                        Fetch data from an external API
+                        { this.store.isLoading 
+                            ? 'Fetching data...'
+                            : 'Fetch data from an external API' }
+                        { this.store.message ? "\n" + this.store.message : null }
                     </Text>
                 </Button>
 
+
                 <Button style={ util.BG_ACCENT } onPress={this.store.increase}>
                     <Text style={[ font.DEFAULT, util.TEXT_INVERSE, util.TEXT_CENTER ]}>
-                        Counter: {this.store.counter}
+                        Counter: { this.store.counter }
                     </Text>
                 </Button>
             </Base>
