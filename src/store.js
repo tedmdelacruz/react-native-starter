@@ -1,6 +1,7 @@
 import { reaction, observable, observe, computer, autoron } from 'mobx'
 import autobind from 'autobind-decorator'
 import axios from 'axios'
+import env from './env'
 
 @autobind
 class Store {
@@ -16,8 +17,7 @@ class Store {
         this.isLoading = true
         this.message = ''
 
-        // const BASE_URL = 'http://10.10.14.141:8000/';
-        axios.get(BASE_URL + '/test')
+        axios.get(env.BASE_URL + '/test')
             .then(response => {
                 this.message = response.data.message
                 this.isLoading = false
