@@ -1,14 +1,24 @@
 import React, { Component } from 'react'
-import { ScrollView, View, Text } from 'react-native'
+import { ScrollView, TouchableHighlight, View, Text } from 'react-native'
+import { Actions } from 'react-native-router-flux'
 import { block, components, font, color } from '../styles'
-import DrawerItem from './DrawerItem'
+import Button from './Button'
 
 export default class Drawer extends Component {
     render() {
         return (
             <ScrollView style={ components.drawer }>
-                <DrawerItem>Profile</DrawerItem>
-                <DrawerItem>Settings</DrawerItem>
+                <TouchableHighlight style={ components.drawerItem } onPress={ Actions.index }>
+                    <Text style={ font.DEFAULT }>
+                        Dashboard
+                    </Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight style={ components.drawerItem } onPress={ Actions.settings }>
+                    <Text style={ font.DEFAULT }>
+                        Settings
+                    </Text>
+                </TouchableHighlight>
             </ScrollView>
         )
     }
