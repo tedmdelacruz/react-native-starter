@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { ToolbarAndroid, TouchableHighlight, View, Text } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-
 import Button from './Button'
 import { color, util } from '../styles'
 

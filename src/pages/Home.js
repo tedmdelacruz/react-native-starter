@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { ScrollView, RefreshControl, Text } from 'react-native'
-
 import { util } from '../styles'
 import BaseLayout from './BaseLayout'
 import Button from '../components/Button'
@@ -35,6 +34,8 @@ export default class Home extends Component {
                             {this.store.message ? "\n" + this.store.message : null}
                         </Text>
                     </Button>
+
+                    <Text>Realtime Data: {this.store.realtimeData.message}</Text>
                     
                 </ScrollView>
             </BaseLayout>
