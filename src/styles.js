@@ -31,11 +31,7 @@ const BASE_FONT_SIZE = 18
 const DEFAULT_TEXT_COLOR = DARK_GREY
 const INVERSE_TEXT_COLOR = WHITE
 
-// Component Styles
-const block = {
-    padding: BASE_UNIT / 3
-} 
-
+// Utility Styles
 export const util = StyleSheet.create({
     PAD: { padding: BASE_UNIT / 2 },
     PUSH_BOTTOM: { marginBottom: BASE_UNIT / 3 },
@@ -45,69 +41,5 @@ export const util = StyleSheet.create({
     TEXT_DEFAULT: { color: DEFAULT_TEXT_COLOR },
     TEXT_INVERSE: { color: INVERSE_TEXT_COLOR },
     TEXT_CENTER: { textAlign: 'center' },
-})
-
-export const components = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-    },
-    button: {
-        padding: BASE_UNIT / 3,
-        backgroundColor: PRIMARY,
-    },
-    toolbarContainer: {
-        flex: 1,
-        flexDirection: 'row',
-        backgroundColor: PRIMARY,
-    },
-    toolbarDrawerIcon: {
-        ...block,
-        flex: 1,
-    },
-    toolbar: {
-        flex: 8,
-        backgroundColor: PRIMARY,
-    },
-    drawer: {
-        flexDirection: 'column'
-    },
-    drawerItem: {
-        ...block,
-        flex: 1,
-    },
-    content: {
-        ...block,
-        flex: 8,
-        backgroundColor: SECONDARY,
-    },
-    bottomNav: {
-        flex: 2,
-        flexDirection: 'row',
-        minHeight: BASE_UNIT * 1.5,
-        backgroundColor: PRIMARY,
-    },
-    bottomNavItem: {
-        ...block,
-        flex: 1,
-        borderRightWidth: 1,
-        borderColor: PRIMARY,
-        backgroundColor: PRIMARY_ALT,
-    },
-    bottomNavItemText: {
-        fontSize: BASE_FONT_SIZE,
-        color: INVERSE_TEXT_COLOR,
-        textAlign: 'center',
-    },
-})
-
-export const font = StyleSheet.create({
-    DEFAULT: {
-        fontSize: BASE_FONT_SIZE,
-        color: DEFAULT_TEXT_COLOR,
-    },
-    INVERSE: {
-        color: INVERSE_TEXT_COLOR,
-    },
 })
     

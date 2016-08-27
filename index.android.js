@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { AppRegistry, View, Text } from 'react-native'
 import { Scene, Router } from 'react-native-mobx'
-
 import store from './src/store'
 import Home from './src/pages/Home'
 import Settings from './src/pages/Settings'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, TouchableHighlight } from 'react-native'
-import { components } from '../styles'
+import { util } from '../styles'
 
 export default class Button extends Component {
     handlePress() {
@@ -8,17 +8,21 @@ export default class Button extends Component {
     }
 
     render() {
-        const buttonStyles = [ components.button ]
+        const buttonStyles = [ styles.button ]
         if (this.props.style) {
             buttonStyles.push(this.props.style)
         }
 
         return (
             <TouchableHighlight style={buttonStyles}
-                onPress={ this.handlePress.bind(this) }>
+                onPress={this.handlePress.bind(this)}>
 
-                { this.props.children }
+                {this.props.children}
             </TouchableHighlight>
         )
     }
+}
+
+const styles = {
+    button: {},
 }

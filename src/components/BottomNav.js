@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
 import { TouchableHighlight, View, Text } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-import { components, font, color } from '../styles'
+import { util } from '../styles'
 
 export default class BottomNav extends Component {
     render() {
         return(
-            <View style={ components.bottomNav }>
-                <TouchableHighlight style={ components.bottomNavItem } onPress={ Actions.index }>
-                    <Text style={ components.bottomNavItemText }>Dashboard</Text>
+            <View style={styles.bottomNav}>
+                <TouchableHighlight style={styles.bottomNavItem} onPress={Actions.index}>
+                    <Text>Dashboard</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight style={ components.bottomNavItem } onPress={ Actions.settings }>
-                    <Text style={ components.bottomNavItemText }>Settings</Text>
+                <TouchableHighlight style={styles.bottomNavItem} onPress={Actions.settings}>
+                    <Text>Settings</Text>
                 </TouchableHighlight>
             </View>
         )
     }
+}
+
+const styles = {
+    bottomNav: {},
+    bottomNavItem: {},
 }

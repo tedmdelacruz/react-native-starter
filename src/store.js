@@ -5,13 +5,8 @@ import env from './env'
 
 @autobind
 class Store {
-    @observable counter = 0
     @observable isLoading = false
     @observable message = ''
-
-    increase() {
-        this.counter++
-    }
 
     fetchData() {
         this.isLoading = true
