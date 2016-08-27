@@ -42,3 +42,4 @@ android/keystores/debug.keystore
 
 # App
 src/env.js
+src/config.js
