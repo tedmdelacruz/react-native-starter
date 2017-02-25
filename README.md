@@ -14,3 +14,12 @@ using React Native on Redux
 - [x] Generate a signed APK
 - [x] Add application icon
 
+# Setup
+
+```
+adb devices
+emulator -avd <DeviceName> 
+yarn
+npm install -g react-native-cli
+react-native run-android
+
